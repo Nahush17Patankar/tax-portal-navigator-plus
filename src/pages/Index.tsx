@@ -1,6 +1,5 @@
-
 import { useState } from "react";
-import { Search, Phone, Globe, Minus, Plus, Moon, Sun, LogIn, UserPlus, Menu, X, ExternalLink, Play, AlertTriangle, Bell, FileText, Video, HelpCircle, ChevronRight } from "lucide-react";
+import { Search, Phone, Globe, Minus, Plus, Moon, Sun, LogIn, UserPlus, Menu, X, ExternalLink, Play, AlertTriangle, Bell, FileText, Video, HelpCircle, ChevronRight, CreditCard, Download, Eye, Shield, Calculator, Receipt, Building, Users, MessageSquare, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -28,6 +27,11 @@ const Index = () => {
         {/* Top Navigation Bar */}
         <div className="bg-blue-600 text-white py-2 px-4">
           <div className="max-w-7xl mx-auto flex justify-between items-center">
+            <div className="flex items-center space-x-4">
+              <img src="/placeholder.svg" alt="Income Tax Logo" className="w-8 h-8" />
+              <span className="text-sm font-medium">e-Filing Anywhere, Anytime</span>
+            </div>
+            
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
@@ -40,9 +44,7 @@ const Index = () => {
                   <option value="hi">हिंदी</option>
                 </select>
               </div>
-            </div>
-            
-            <div className="flex items-center space-x-4">
+              
               {/* Font Size Controls */}
               <div className="flex items-center space-x-1">
                 <Button
@@ -174,31 +176,87 @@ const Index = () => {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
-                    <span>File ITR</span>
+                    <div className="flex items-center space-x-2">
+                      <FileText className="w-4 h-4 text-blue-600" />
+                      <span>File ITR</span>
+                    </div>
                     <ChevronRight className="w-4 h-4" />
                   </a>
                   <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
-                    <span>View Form 26AS</span>
+                    <div className="flex items-center space-x-2">
+                      <Eye className="w-4 h-4 text-green-600" />
+                      <span>View Form 26AS</span>
+                    </div>
                     <ChevronRight className="w-4 h-4" />
                   </a>
                   <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
-                    <span>Track Refund Status</span>
+                    <div className="flex items-center space-x-2">
+                      <Search className="w-4 h-4 text-orange-600" />
+                      <span>Track Refund Status</span>
+                    </div>
                     <ChevronRight className="w-4 h-4" />
                   </a>
                   <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
-                    <span>e-Verify Return</span>
+                    <div className="flex items-center space-x-2">
+                      <Shield className="w-4 h-4 text-purple-600" />
+                      <span>e-Verify Return</span>
+                    </div>
                     <ChevronRight className="w-4 h-4" />
                   </a>
                   <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
-                    <span>Download Forms</span>
+                    <div className="flex items-center space-x-2">
+                      <Download className="w-4 h-4 text-gray-600" />
+                      <span>Download Forms</span>
+                    </div>
                     <ChevronRight className="w-4 h-4" />
                   </a>
                   <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
-                    <span>PAN Services</span>
+                    <div className="flex items-center space-x-2">
+                      <CreditCard className="w-4 h-4 text-indigo-600" />
+                      <span>PAN Services</span>
+                    </div>
+                    <ChevronRight className="w-4 h-4" />
+                  </a>
+                  <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
+                    <div className="flex items-center space-x-2">
+                      <Building className="w-4 h-4 text-red-600" />
+                      <span>TAN Services</span>
+                    </div>
+                    <ChevronRight className="w-4 h-4" />
+                  </a>
+                  <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
+                    <div className="flex items-center space-x-2">
+                      <Calculator className="w-4 h-4 text-teal-600" />
+                      <span>Tax Calculator</span>
+                    </div>
+                    <ChevronRight className="w-4 h-4" />
+                  </a>
+                  <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
+                    <div className="flex items-center space-x-2">
+                      <Receipt className="w-4 h-4 text-yellow-600" />
+                      <span>TDS Certificate</span>
+                    </div>
+                    <ChevronRight className="w-4 h-4" />
+                  </a>
+                  <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
+                    <div className="flex items-center space-x-2">
+                      <Users className="w-4 h-4 text-pink-600" />
+                      <span>Taxpayer Services</span>
+                    </div>
+                    <ChevronRight className="w-4 h-4" />
+                  </a>
+                  <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
+                    <div className="flex items-center space-x-2">
+                      <MessageSquare className="w-4 h-4 text-cyan-600" />
+                      <span>Grievance Portal</span>
+                    </div>
                     <ChevronRight className="w-4 h-4" />
                   </a>
                   <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2">
-                    <span>TAN Services</span>
+                    <div className="flex items-center space-x-2">
+                      <BookOpen className="w-4 h-4 text-emerald-600" />
+                      <span>User Manual</span>
+                    </div>
                     <ChevronRight className="w-4 h-4" />
                   </a>
                 </CardContent>
