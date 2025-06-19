@@ -29,7 +29,10 @@ const Index = () => {
           <div className="max-w-7xl mx-auto flex justify-between items-center">
             <div className="flex items-center space-x-4">
               <img src="/placeholder.svg" alt="Income Tax Logo" className="w-8 h-8" />
-              <span className="text-sm font-medium">e-Filing Anywhere, Anytime</span>
+              <div className="flex flex-col">
+                <span className="text-sm font-medium">e-Filing Anywhere, Anytime</span>
+                <span className="text-xs font-light">Income Tax Department</span>
+              </div>
             </div>
             
             <div className="flex items-center space-x-6">
