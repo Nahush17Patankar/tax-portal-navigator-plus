@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Search, Phone, Globe, Minus, Plus, Moon, Sun, LogIn, UserPlus, Menu, X, ExternalLink, Play, AlertTriangle, Bell, FileText, Video, HelpCircle, ChevronRight, CreditCard, Download, Eye, Shield, Calculator, Receipt, Building, Users, MessageSquare, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -100,21 +99,54 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Main Header */}
-        <div className="bg-white dark:bg-gray-800 shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 py-4">
+        {/* Secondary Navigation */}
+        <div className="bg-blue-50 dark:bg-gray-700 border-b">
+          <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <img src="/placeholder.svg" alt="Income Tax Logo" className="w-12 h-12" />
-                <div>
-                  <h1 className="text-2xl font-bold text-gray-800 dark:text-white">Income Tax Department</h1>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Government of India</p>
+              <nav className="hidden md:flex space-x-8 py-3">
+                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Home</a>
+                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Individual</a>
+                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Company</a>
+                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Non-Company</a>
+                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Tax Professional</a>
+                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Downloads</a>
+                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Help</a>
+              </nav>
+              
+              <div className="flex items-center space-x-4 py-3">
+                <div className="relative">
+                  <Input
+                    type="text"
+                    placeholder="Search..."
+                    className="pr-10 w-64"
+                  />
+                  <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                 </div>
               </div>
-              <div className="hidden md:block">
-                <img src="/placeholder.svg" alt="Digital India" className="w-24 h-12" />
-              </div>
+              
+              <Button
+                variant="ghost"
+                className="md:hidden"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </Button>
             </div>
+            
+            {/* Mobile Menu */}
+            {isMobileMenuOpen && (
+              <div className="md:hidden pb-4">
+                <nav className="flex flex-col space-y-2">
+                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Home</a>
+                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Individual</a>
+                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Company</a>
+                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Non-Company</a>
+                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Tax Professional</a>
+                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Downloads</a>
+                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Help</a>
+                </nav>
+              </div>
+            )}
           </div>
         </div>
 
@@ -205,7 +237,7 @@ const Index = () => {
                     </div>
                     <ChevronRight className="w-4 h-4" />
                   </a>
-                  <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2">
+                  <a href="#" className="flex items-center justify-between text-sm hover:text-blue-600 py-2 border-b">
                     <div className="flex items-center space-x-2">
                       <BookOpen className="w-4 h-4 text-emerald-600" />
                       <span>User Manual</span>
