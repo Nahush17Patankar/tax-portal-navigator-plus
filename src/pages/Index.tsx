@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Search, Phone, Globe, Minus, Plus, Moon, Sun, LogIn, UserPlus, Menu, X, ExternalLink, Play, AlertTriangle, Bell, FileText, Video, HelpCircle, ChevronRight, CreditCard, Download, Eye, Shield, Calculator, Receipt, Building, Users, MessageSquare, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -114,57 +115,6 @@ const Index = () => {
                 <img src="/placeholder.svg" alt="Digital India" className="w-24 h-12" />
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Secondary Navigation */}
-        <div className="bg-blue-50 dark:bg-gray-700 border-b">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex items-center justify-between">
-              <nav className="hidden md:flex space-x-8 py-3">
-                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Home</a>
-                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Individual</a>
-                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Company</a>
-                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Non-Company</a>
-                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Tax Professional</a>
-                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Downloads</a>
-                <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 font-medium">Help</a>
-              </nav>
-              
-              <div className="flex items-center space-x-4 py-3">
-                <div className="relative">
-                  <Input
-                    type="text"
-                    placeholder="Search..."
-                    className="pr-10 w-64"
-                  />
-                  <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                </div>
-              </div>
-              
-              <Button
-                variant="ghost"
-                className="md:hidden"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              >
-                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </Button>
-            </div>
-            
-            {/* Mobile Menu */}
-            {isMobileMenuOpen && (
-              <div className="md:hidden pb-4">
-                <nav className="flex flex-col space-y-2">
-                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Home</a>
-                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Individual</a>
-                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Company</a>
-                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Non-Company</a>
-                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Tax Professional</a>
-                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Downloads</a>
-                  <a href="#" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 py-2">Help</a>
-                </nav>
-              </div>
-            )}
           </div>
         </div>
 
